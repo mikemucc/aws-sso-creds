@@ -5,7 +5,7 @@
 <a name="1.0.4"></a>
 ## [1.0.4] - 2023-05-07
 ### Feat
-- Refactored using cobra ([#5](https://github.com/JorgeReus/aws-sso-creds/issues/5))
+- Refactored using cobra ([#5](https://github.com/mikemucc/aws-sso-creds/issues/5))
 
 
 <a name="1.0.4-betav0.0.3"></a>
@@ -32,7 +32,7 @@
 - Updated README
 
 ### Feat
-- Refactored fuzzyfinder previewer ([#3](https://github.com/JorgeReus/aws-sso-creds/issues/3))
+- Refactored fuzzyfinder previewer ([#3](https://github.com/mikemucc/aws-sso-creds/issues/3))
 
 
 <a name="1.0.0"></a>
@@ -44,9 +44,9 @@
 - First commit
 
 
-[Unreleased]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.4...HEAD
-[1.0.4]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.4-betav0.0.3...1.0.4
-[1.0.4-betav0.0.3]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.3...1.0.4-betav0.0.3
-[1.0.3]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.2...1.0.3
-[1.0.2]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/JorgeReus/aws-sso-creds/compare/1.0.0...1.0.1
+[Unreleased]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.4...HEAD
+[1.0.4]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.4-betav0.0.3...1.0.4
+[1.0.4-betav0.0.3]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.3...1.0.4-betav0.0.3
+[1.0.3]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.2...1.0.3
+[1.0.2]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/mikemucc/aws-sso-creds/compare/1.0.0...1.0.1

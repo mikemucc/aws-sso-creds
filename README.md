@@ -59,7 +59,7 @@ Use it to **easily** manage entries in `~/.aws/config` & `~/.aws/credentials` fi
 
 ### Static Releases
 
-Download the binary based on your OS in [The releases section](https://github.com/JorgeReus/aws-sso-creds/releases)
+Download the binary based on your OS in [The releases section](https://github.com/mikemucc/aws-sso-creds/releases)
 
 ### From source
 
@@ -67,7 +67,7 @@ Download the binary based on your OS in [The releases section](https://github.co
 
 - Go 1.17+
 
-Run `go install github.com/JorgeReus/aws-sso-creds@latest`
+Run `go install github.com/mikemucc/aws-sso-creds@latest`
 
 <!-- USAGE EXAMPLES -->
 

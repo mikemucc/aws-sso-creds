@@ -1,0 +1,11 @@
+error_color = "#fa0718"
+information_color = "#05fa5f"
+warning_color = "#f29830"
+focus_color = "#4287f5"
+spinner_color = "#42f551"
+
+### Update the URL to point to your AWS start page
+[organizations.default]
+url = "https://default.awsapps.com/start"
+prefix = "default"
+region = "us-east-1"

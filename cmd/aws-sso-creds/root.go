@@ -1,6 +1,7 @@
 package awsssocreds
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os"
@@ -20,7 +21,7 @@ var rootCmd = &cobra.Command{
 	Short: "aws-sso-creds - Local AWS SSO credentials made easy",
 	Long: `Opinionated CLI app for AWS SSO made in Golang!
 AWS SSO Creds is an AWS SSO creds manager for the shell.
-Use it to easily manage entries in ~/.aws/config & ~/.aws/credentials files, so you can focus on your AWS workflows, without the hazzle of manually managing your credentials.`,
+Use it to easily manage entries in ~/.aws/config & ~/.aws/credentials files, so you can focus on your AWS workflows, without the hasslele of manually managing your credentials.`,
 	Args: func(cmd *cobra.Command, args []string) error {
 
 		if err := config.Init(home, configPath); err != nil {
@@ -36,14 +37,19 @@ Use it to easily manage entries in ~/.aws/config & ~/.aws/credentials files, so 
 		var ok bool
 		if selectedOrg, ok = config.GetInstance().Orgs[args[0]]; !ok {
 			return fmt.Errorf(
-				"Organization '%s' not found in config file %s",
+				"organization '%s' not found in config file %s",
 				args[0],
 				configPath,
 			)
 		}
 		return nil
 	},
+	PreRun: func(cmd *cobra.Command, args []string) {
+		if _, err := os.Stat(configPath); errors.Is(err, os.ErrNotExist) {
+			panic(fmt.Errorf("%s does not exist", configPath))
 
+		}
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		uiVars := ui.UI{
 			CreateStatic:  createStatic,
@@ -80,7 +86,7 @@ func Execute() {
 	var err error
 	home, err = util.HomeDir()
 	if err != nil {
-		panic(fmt.Errorf("Error getting user home dir: %s", err))
+		panic(fmt.Errorf("error getting user home dir: %s", err))
 	}
 
 	// configPath
@@ -88,6 +94,6 @@ func Execute() {
 		StringVarP(&configPath, "config", "c", fmt.Sprintf("%s/.config/aws-sso-creds.toml", home), "Directory of the .toml config")
 
 	if err := rootCmd.Execute(); err != nil {
-		panic(fmt.Errorf("There was an error running aws-sso-creds '%s'", err))
+		panic(fmt.Errorf("there was an error running aws-sso-creds '%s'", err))
 	}
 }

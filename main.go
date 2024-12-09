@@ -1,7 +1,7 @@
 package main
 
 import (
-	app "github.com/JorgeReus/aws-sso-creds/cmd/aws-sso-creds"
+	app "github.com/mikemucc/aws-sso-creds/cmd/aws-sso-creds"
 )
 
 func main() {
